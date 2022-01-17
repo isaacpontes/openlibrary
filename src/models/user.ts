@@ -14,7 +14,7 @@ interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
 interface UserInstance extends Model<UserAttributes, UserCreationAttributes>, UserAttributes {}
 
 const User = database.define<UserInstance>(
-  "Users",
+  "users",
   {
     id: {
       type: DataTypes.INTEGER,
