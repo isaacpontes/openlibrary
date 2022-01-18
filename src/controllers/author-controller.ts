@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import Author from '../models/author'
+import { Author } from '../models'
 
 export const authorsController = {
 
