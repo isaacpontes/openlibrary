@@ -7,6 +7,7 @@ interface UserAttributes {
   role: "admin" | "user"
   username: string
   password: string
+  avatar?: string
 }
 
 interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
@@ -37,7 +38,8 @@ const User = database.define<UserInstance>(
     password: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    avatar: DataTypes.STRING
   }
 )
 
