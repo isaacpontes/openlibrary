@@ -1,14 +1,15 @@
 import { ResourceWithOptions } from 'adminjs'
-import { Author, Book, Category, User } from '../../models'
+import { Author, Book, Category, Loan, User } from '../../models'
 import { authorResourceOptions } from './author'
 import { bookResourceOptions } from './book'
 import { categoryResourceOptions } from './category'
+import { loanResourceOptions } from './loan'
 import { userResourceFeatures, userResourceOptions } from './user'
 
 const adminJsResources: ResourceWithOptions[] = [
     {
-        resource: Author,
-        options: authorResourceOptions
+        resource: Loan,
+        options: loanResourceOptions
     },
     {
         resource: Book,
@@ -17,6 +18,10 @@ const adminJsResources: ResourceWithOptions[] = [
     {
         resource: Category,
         options: categoryResourceOptions
+    },
+    {
+        resource: Author,
+        options: authorResourceOptions
     },
     {
         resource: User,

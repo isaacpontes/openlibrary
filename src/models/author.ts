@@ -6,9 +6,9 @@ interface AuthorAttributes {
   name: string
 }
 
-interface AuthorCreationAttributes extends Optional<AuthorAttributes, 'id'> {}
+interface AuthorCreationAttributes extends Optional<AuthorAttributes, 'id'> { }
 
-interface AuthorInstance extends Model<AuthorAttributes, AuthorCreationAttributes>, AuthorAttributes {}
+interface AuthorInstance extends Model<AuthorAttributes, AuthorCreationAttributes>, AuthorAttributes { }
 
 const Author = database.define<AuthorInstance>(
   "authors",
@@ -25,4 +25,4 @@ const Author = database.define<AuthorInstance>(
   }
 )
 
-export default Author
+export { Author }

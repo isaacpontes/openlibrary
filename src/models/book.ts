@@ -60,4 +60,4 @@ const Book = database.define<BookInstance>(
     }
 )
 
-export default Book
+export { Book }

@@ -6,9 +6,9 @@ interface CategoryAttributes {
   name: string
 }
 
-interface CategoryCreationAttributes extends Optional<CategoryAttributes, 'id'> {}
+interface CategoryCreationAttributes extends Optional<CategoryAttributes, 'id'> { }
 
-interface CategoryInstance extends Model<CategoryAttributes, CategoryCreationAttributes>, CategoryAttributes {}
+interface CategoryInstance extends Model<CategoryAttributes, CategoryCreationAttributes>, CategoryAttributes { }
 
 const Category = database.define<CategoryInstance>(
   "categories",
@@ -25,4 +25,4 @@ const Category = database.define<CategoryInstance>(
   }
 )
 
-export default Category
+export { Category }

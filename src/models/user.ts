@@ -10,9 +10,9 @@ interface UserAttributes {
   avatar?: string
 }
 
-interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
+interface UserCreationAttributes extends Optional<UserAttributes, 'id'> { }
 
-interface UserInstance extends Model<UserAttributes, UserCreationAttributes>, UserAttributes {}
+interface UserInstance extends Model<UserAttributes, UserCreationAttributes>, UserAttributes { }
 
 const User = database.define<UserInstance>(
   "users",
@@ -43,4 +43,4 @@ const User = database.define<UserInstance>(
   }
 )
 
-export default User
+export { User }
