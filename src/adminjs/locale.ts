@@ -59,6 +59,7 @@ const locale: Locale = {
             username: 'Nome de Usuário',
             password: 'Senha',
             avatar: 'Foto',
+            uploadImage: 'Enviar uma imagem',
             createdAt: 'Criado em',
             updatedAt: 'Atualizado em',
             from: 'De',
