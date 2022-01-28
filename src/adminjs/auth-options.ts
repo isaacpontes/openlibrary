@@ -3,8 +3,8 @@ import { AuthenticationOptions } from '@adminjs/express'
 import { User } from '../models'
 
 const authOptions: AuthenticationOptions = {
-    authenticate: async (username, password) => {
-        const user = await User.findOne({ where: { username } })
+    authenticate: async (email, password) => {
+        const user = await User.findOne({ where: { email } })
 
         if (user) {
             const matched = await bcrypt.compare(password, user.password)

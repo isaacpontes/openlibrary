@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ApiClient, useCurrentAdmin } from 'adminjs'
-import { H1, Table, TableHead, TableBody, TableRow, TableCell } from '@adminjs/design-system'
+import { H1, H2, Table, TableHead, TableBody, TableRow, TableCell } from '@adminjs/design-system'
 
 interface DashboardResponse {
     authors: number
@@ -32,9 +32,10 @@ const Dashboard = () => {
 
     return (
         <div style={{ padding: '1.5rem' }}>
-            <H1>Olá, {currentAdmin?.name}!</H1>
+            <H1>Olá, {currentAdmin?.firstName}!</H1>
 
             <section style={{ backgroundColor: '#FFF', padding: '1.5rem' }}>
+                <H2>Resumo</H2>
                 <Table>
                     <TableHead>
                         <TableRow style={{ backgroundColor: '#C84B31'}}>

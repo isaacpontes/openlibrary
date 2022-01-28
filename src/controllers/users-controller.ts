@@ -16,10 +16,19 @@ export const usersController = {
     },
 
     save: async (req: Request, res: Response) => {
-        const { name, username, password } = req.body
+        const { firstName, lastName, phone, birth, email, password } = req.body
 
         try {
-            const user = await User.create({ name, username, password, role: 'user' })
+            const user = await User.create({
+                firstName,
+                lastName,
+                phone,
+                birth,
+                email,
+                password,
+                role: 'user'
+            })
+
             return res.status(201).json(user)
         } catch (error) {
             if (error instanceof Error) {
@@ -45,13 +54,15 @@ export const usersController = {
 
     update: async (req: Request, res: Response) => {
         const { id } = req.params
-        const { name, username, password } = req.body
+        const { firstName, lastName, phone, birth, email } = req.body
 
         try {
             const result = await User.update({
-                name,
-                username,
-                password
+                firstName,
+                lastName,
+                phone,
+                birth,
+                email,
             }, {
                 where: { id },
                 returning: true

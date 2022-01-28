@@ -44,6 +44,10 @@ const locale: Locale = {
             users: 'Usuários'
           },
           properties: {
+            firstName: 'Primeiro Nome',
+            lastName: 'Sobrenome',
+            phone: 'Telefone',
+            birth: 'Data de Nascimento',
             name: 'Nome',
             title: 'Título',
             summary: 'Resumo',
@@ -56,7 +60,7 @@ const locale: Locale = {
             bookId: 'Livro',
             returnDate: 'Data de Devolução',
             role: 'Perfil',
-            username: 'Nome de Usuário',
+            email: 'E-mail',
             password: 'Senha',
             avatar: 'Foto',
             uploadImage: 'Enviar uma imagem',
